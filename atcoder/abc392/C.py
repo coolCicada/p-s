@@ -12,3 +12,5 @@ for i in range(N):
     r.append(aB[aA[dic[i + 1]] - 1])
 
 print(' '.join(map(str, r)))
+
+## test
