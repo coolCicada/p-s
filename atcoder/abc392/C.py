@@ -1,16 +1,10 @@
 N = int(input())
 
-aA = list(map(int, input().split()))
-aB = list(map(int, input().split()))
+aA = [0] + list(map(int, input().split()))
+aB = [0] + list(map(int, input().split()))
 
-dic = {}
-for i in range(N):
-    dic[aB[i]] = i
+Res = [0] * (N + 1)
+for i in range(1, N + 1):
+    Res[aB[i]] = aB[aA[i]]
 
-r = []
-for i in range(N):
-    r.append(aB[aA[dic[i + 1]] - 1])
-
-print(' '.join(map(str, r)))
-
-## test
+print(' '.join(map(str, Res[1:])))
